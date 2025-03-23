@@ -127,12 +127,12 @@
         </div>
 
         <div class="redirect-text">
-            <p>Already have an account? <a href="./login (3).html">Login here</a></p>
+            <p>Already have an account? <a href="./login.html">Login here</a></p>
         </div>
     </div>
 
     <script>
-        let generatedOtp = ''; // For mock OTP generation
+        let generatedOtp = ''; 
 
         function sendOtp() {
             const phoneNumber = document.getElementById('phoneNumber').value;
@@ -141,11 +141,11 @@
                 return;
             }
 
-            // Mock OTP generation (replace with actual API call in production)
-            generatedOtp = Math.floor(100000 + Math.random() * 900000); // 6-digit OTP
-            console.log(`Generated OTP: ${generatedOtp}`);  // For testing purposes, log the OTP in the console
+            
+            generatedOtp = Math.floor(100000 + Math.random() * 900000); 
+            console.log(`Generated OTP: ${generatedOtp}`);  
 
-            // Display OTP section
+           
             document.getElementById('otpSection').style.display = 'block';
             document.getElementById('otpMessage').innerText = 'An OTP has been sent to your phone number. Please enter it to verify.';
         }
@@ -157,7 +157,7 @@
                 document.getElementById('otpMessage').style.color = '#2ecc71';
                 setTimeout(() => {
                     alert("Account created successfully!");
-                    // Here you would proceed to submit the form or redirect the user
+                    
                 }, 1000);
             } else {
                 document.getElementById('otpMessage').innerText = 'Incorrect OTP, please try again.';
@@ -166,7 +166,7 @@
         }
 
         function handleSubmit(event) {
-            event.preventDefault(); // Prevent form submission before OTP verification
+            event.preventDefault();
             alert("Please verify OTP first.");
         }
         

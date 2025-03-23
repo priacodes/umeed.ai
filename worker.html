@@ -232,6 +232,14 @@
         document.getElementById("profileBuilderBtn").addEventListener("click", function() {
             alert("Navigate to Profile Builder Section");
         });
+      
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!localStorage.getItem("userLoggedIn")) {
+      window.location.href = "signup.html"; // Redirect to Signup page
+    }
+  });
+
+
     </script>
 </body>
 </html>

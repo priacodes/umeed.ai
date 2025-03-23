@@ -128,8 +128,8 @@
     </div>
 
     <script>
-        let generatedOtp = ''; // For mock OTP generation
-        let userRole = ''; // To store the selected role
+        let generatedOtp = ''; 
+        let userRole = ''; 
 
         function sendOtp() {
             const phoneNumber = document.getElementById('phoneNumber').value;
@@ -145,9 +145,9 @@
                 return;
             }
 
-            // Mock OTP generation (replace with actual API call in production)
-            generatedOtp = Math.floor(100000 + Math.random() * 900000); // 6-digit OTP
-            console.log(`Generated OTP: ${generatedOtp}`);  // For testing purposes, log the OTP in the console
+            )
+            generatedOtp = Math.floor(100000 + Math.random() * 900000); 
+            console.log(`Generated OTP: ${generatedOtp}`); 
 
             // Display OTP section
             document.getElementById('otpSection').style.display = 'block';
@@ -171,16 +171,16 @@
 
         function redirectToDashboard() {
             if (userRole === 'worker') {
-                // Redirect to Worker Dashboard
-                window.location.href = 'index.html'; // Replace with your actual worker dashboard URL
+               
+                window.location.href = 'index.html';
             } else if (userRole === 'recruiter') {
-                // Redirect to Recruiter Dashboard
-                window.location.href = "recruiter.html"; // Replace with your actual recruiter dashboard URL
+              
+                window.location.href = "recruiter.html";
             }
         }
 
         function handleSubmit(event) {
-            event.preventDefault(); // Prevent form submission before OTP verification
+            event.preventDefault();
             alert("Please verify OTP first.");
         }
     </script>

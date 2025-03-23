@@ -93,7 +93,8 @@
 </head>
 <body>
 
-    
+    <pre id="apiData">Loading API data...</pre>
+
 
 
     <div class="container">
@@ -168,8 +169,20 @@
             event.preventDefault(); // Prevent form submission before OTP verification
             alert("Please verify OTP first.");
         }
+        
+  document.addEventListener("DOMContentLoaded", function() {
+      fetch("https://umeed-ai.onrender.com/api")
+        .then(response => response.json())
+        .then(data => {
+            console.log("API Response:", data);
+            document.getElementById("apiData").innerText = JSON.stringify(data, null, 2);
+        })
+        .catch(error => console.error("Error:", error));
+  });
+
+
     </script>
-    <script src="voice-navigation.js"></script>
+   
 
 
 </body>

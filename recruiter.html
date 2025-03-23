@@ -14,7 +14,6 @@
             color: #2e5c3d;
         }
 
-        /* ✅ Header */
         .header {
             display: flex;
             justify-content: space-between;
@@ -41,7 +40,7 @@
             border: 2px solid white;
         }
 
-        /* ✅ Navigation */
+     
         .nav-buttons {
             display: flex;
             justify-content: center;
@@ -67,7 +66,7 @@
             background: #219150;
         }
 
-        /* ✅ Main Container */
+       
         .dashboard-container {
             max-width: 1000px;
             margin: 30px auto;
@@ -77,7 +76,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* ✅ Content Sections */
+       
         .content-section {
             display: none;
             padding: 20px;
@@ -97,7 +96,7 @@
             font-size: 22px;
         }
 
-        /* ✅ Form Styling */
+       
         form {
             display: flex;
             flex-direction: column;
@@ -138,7 +137,7 @@
             background: #219150;
         }
 
-        /* ✅ Applicant List */
+      
         ul {
             list-style: none;
             padding: 0;
@@ -167,7 +166,7 @@
             background: #219150;
         }
 
-        /* ✅ Responsive Design */
+        
         @media (max-width: 768px) {
             .dashboard-container {
                 width: 90%;
@@ -185,7 +184,7 @@
     </style>
 </head>
 <body>
-    <!-- ✅ Enlarged Header -->
+  
     <div class="header">
         <span>Recruiter Dashboard</span>
         <div class="profile">
@@ -194,14 +193,14 @@
         </div>
     </div>
 
-    <!-- ✅ Navigation -->
+
     <div class="nav-buttons">
         <button onclick="showSection('post-job')">Post a Job</button>
         <button onclick="showSection('view-applicants')">View Applicants</button>
         <button onclick="showSection('hire-worker')">Hire a Worker</button>
     </div>
 
-    <!-- ✅ Main Dashboard -->
+
     <div class="dashboard-container">
         <section id="post-job" class="content-section active">
             <h2>Post a Job</h2>
@@ -244,13 +243,12 @@
             document.getElementById(sectionId).classList.add('active');
         }
 
-        // Simulating Job Form Submission
+        
         document.getElementById("jobForm").addEventListener("submit", function(event) {
             event.preventDefault();
             alert("Job Posted Successfully!");
         });
 
-        // Hire Button Alert
         document.querySelectorAll(".hire-btn").forEach(button => {
             button.addEventListener("click", function() {
                 alert("Worker Hired Successfully!");

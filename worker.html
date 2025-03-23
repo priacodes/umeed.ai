@@ -13,7 +13,7 @@
             background: #f4f4f4;
         }
 
-        /* ✅ Enlarged Header */
+        
         .header {
             display: flex;
             justify-content: center;
@@ -25,7 +25,7 @@
             font-weight: bold;
         }
 
-        /* Main Dashboard Layout */
+       
         .dashboard-container {
             display: flex;
             max-width: 1200px;
@@ -33,7 +33,7 @@
             gap: 20px;
         }
 
-        /* Job Listings - Left Side */
+       
         .jobs-container {
             flex: 2;
             background: white;
@@ -44,7 +44,7 @@
 
         .jobs-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-columns: repeat(2, 1fr); 
             gap: 20px;
             margin-top: 20px;
         }
@@ -73,7 +73,7 @@
             background: #2ecc71;
         }
 
-        /* Mini Dashboard - Right Side */
+        
         .mini-dashboard {
             flex: 1;
             background: white;
@@ -125,20 +125,18 @@
             background: #45a049;
             color: white;
         }
-
-        /* Hidden Sections */
         .hidden {
             display: none;
         }
 
-        /* Responsive Design */
+      
         @media (max-width: 768px) {
             .dashboard-container {
                 flex-direction: column;
             }
 
             .jobs-grid {
-                grid-template-columns: 1fr; /* Stack jobs in a single column on smaller screens */
+                grid-template-columns: 1fr; 
             }
 
             .mini-dashboard {
@@ -148,12 +146,11 @@
     </style>
 </head>
 <body>
-    <!-- ✅ Enlarged Header -->
+  
     <div class="header">Umeed.ai</div>
 
-    <!-- Main Dashboard Layout -->
     <div class="dashboard-container">
-        <!-- Jobs Section (Left Side) -->
+        
         <div class="jobs-container">
             <h2>Available Jobs</h2>
             <p>Find jobs that match your skills and apply.</p>
@@ -182,7 +179,7 @@
             </div>
         </div>
 
-        <!-- Mini Dashboard (Right Side) -->
+      
         <div class="mini-dashboard">
             <div class="profile-section">
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile" class="profile-image" id="profileImage">
@@ -201,14 +198,14 @@
     </div>
 
     <script>
-        // Apply Now Button Alert
+       
         document.querySelectorAll(".apply-btn").forEach(button => {
             button.addEventListener("click", function() {
                 alert("Your application has been submitted!");
             });
         });
 
-        // Load User Profile
+      
         function loadUserProfile() {
             const userData = {
                 name: "Rahul Kumar",
@@ -235,7 +232,7 @@
       
   document.addEventListener("DOMContentLoaded", function () {
     if (!localStorage.getItem("userLoggedIn")) {
-      window.location.href = "signup.html"; // Redirect to Signup page
+      window.location.href = "signup.html"; 
     }
   });
 

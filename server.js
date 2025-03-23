@@ -4,7 +4,6 @@ const admin = require("firebase-admin");
 const path = require("path");
 const fs = require("fs");
 
-// ✅ Ensure `serviceAccountKey.json` exists before requiring it
 const serviceAccountPath = path.join(__dirname, "serviceAccountKey.json");
 
 if (!fs.existsSync(serviceAccountPath)) {
@@ -12,10 +11,10 @@ if (!fs.existsSync(serviceAccountPath)) {
     process.exit(1);
 }
 
-// ✅ Initialize Firebase
+
 admin.initializeApp({
     credential: admin.credential.cert(require(serviceAccountPath)),
-    databaseURL: "https://your-project-id.firebaseio.com", // Replace with your actual Firebase URL
+    databaseURL: "https://your-project-id.firebaseio.com", 
 });
 
 const db = admin.firestore();
@@ -25,7 +24,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// ✅ User Signup Route
 app.post("/signup", async (req, res) => {
     const { idToken, phoneNumber, fullName, age, gender, role } = req.body;
 
